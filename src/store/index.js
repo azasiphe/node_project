@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
-axios.defaults.withCredentials= true;
+
 const baseUrl = 'https://node-project-3.onrender.com';
 
 export default createStore({
@@ -22,10 +22,10 @@ export default createStore({
     }
   },
   actions: {
-    async fetchProducts(context) {
+    async fetchProducts({commit}) {
       try {
         const response = await axios.get(`${baseUrl}/products`) ;
-        const {products} = await response.data 
+        const products = await response.data 
         if(products){
           commit('SET_PRODUCTS', products);
         }
