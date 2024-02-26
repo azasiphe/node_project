@@ -1,4 +1,6 @@
 <template>
+
+  <h1 class="display-1">ADMIN PAGE</h1>
     <div class="products">
       <div class="add-product">
         <input v-model="prodID" type="text" placeholder="ID">

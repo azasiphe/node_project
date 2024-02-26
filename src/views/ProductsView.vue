@@ -1,4 +1,8 @@
 <template>
+  <h1 class="display-1">PRODUCT PAGE</h1>
+  <div class="products-search mb-4 justify-content-start">
+    <button class="bilter-button space-between">Filter</button> <button>Search</button>
+  </div>
     <div class="products">
       <div class="product-cards">
         <div v-for="product in products" :key="product.prodID" class="product-card">
