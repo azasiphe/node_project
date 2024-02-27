@@ -140,7 +140,7 @@
 
 
 .products{
-    background-image: url(https://i.ibb.co/j3V3q0P/images-4.jpg);
+    background-image: url();
     background-size: cover;
     width: 100%;
   }

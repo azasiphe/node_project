@@ -24,7 +24,7 @@ export default createStore({
   actions: {
     async fetchProducts({commit}) {
       try {
-        const response = await axios.get(`${baseUrl}/products`) ;
+        const response = await axios.get(`${baseUrl}/products`);
         const products = await response.data 
         if(products){
           commit('SET_PRODUCTS', products);

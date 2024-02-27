@@ -12,10 +12,10 @@
           <div class="product-details">
             <h3 class="product-name">{{ product.prodName }}</h3>
             <p class="product-amount">{{ product.amount }}</p>
-<<<<<<< HEAD
-=======
+
+
           <button @click="viewmore">view more</button>
->>>>>>> e2ac448341c9a9bba3596395cbf75782b6592a35
+
           </div>
         </div>
       </div>

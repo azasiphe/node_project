@@ -1,8 +1,7 @@
 <template>
-   
     <div class="aboutus">
         <div class="row justify-content-center">
-            <div class="col-8">
+            <div class="col-7">
                 <h1 class="display-2"><img class="Contact-img" src="https://i.ibb.co/GxLs0XZ/pngtree-yellow-brush-stock-clipart-png-image-8940369-removebg-preview.png" alt="background-image" loading="lazy" width="200">CONTACT US</h1>
                 <div class="inputNames">
                       <div class="form-floating m-5">
@@ -31,12 +30,12 @@
                         </div>
                     </div>
             </div>
+            <div class="col-1"></div>
             <div class="col-4">
                 <img src="https://i.ibb.co/vHWKQbj/Screenshot-2024-02-26-123707.png" alt="" loading="lazy">
             </div>
         </div>
     </div>
-
 </template>
 
 <style>

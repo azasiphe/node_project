@@ -1,11 +1,11 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/products">Products</router-link> |
-    <router-link to="/admin">Admin</router-link> |
-    <router-link to="/contact">Contact</router-link>
-    <router-link to="/view"></router-link>
+    <router-link to="/" class="navlink">Home</router-link> |
+    <router-link to="/about" class="navlink">About</router-link> |
+    <router-link to="/products" class="navlink">Products</router-link> |
+    <router-link to="/admin" class="navlink">Admin</router-link> |
+    <router-link to="/contact" class="navlink">Contact</router-link>
+    <router-link to="/view" class="navlink"></router-link>
   </nav>
   <router-view/>
 </template>
@@ -30,5 +30,8 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+.navlink {
+  font-size: x-large;
 }
 </style>
