@@ -3,6 +3,7 @@
  
     <div class="products">
       <h1 class="display-1">ADMIN PAGE</h1>
+      
       <div class="add-product">
         <input v-model="prodID" type="text" placeholder="ID">
         <input v-model="prodName" type="text" placeholder="Name">
