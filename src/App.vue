@@ -6,6 +6,7 @@
     <router-link to="/admin" class="navlink">Admin</router-link> |
     <router-link to="/contact" class="navlink">Contact</router-link>
     <router-link to="/view" class="navlink"></router-link>
+    <router-link to="/user" class="navlink"></router-link>
   </nav>
   <router-view/>
 </template>

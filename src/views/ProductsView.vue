@@ -1,11 +1,6 @@
 <template>
   <h1 class="display-1">PRODUCT PAGE</h1>
-  <div class="products-search mb-4 justify-content-start">
 
-      <button class="filter-button space-between" @click="toggleSort" id="filter">Sort </button>
-      <input v-model="searchInput" placeholder="" class="search-input">
-      <button @click="search" class="search-button">Search</button>
-    </div>
     <div class="products">
 
     <button class="bilter-button space-between" id="filter">Filter</button>
@@ -21,12 +16,11 @@
             <h3 class="product-name">{{ product.prodName }}</h3>
             <p class="product-amount">{{ product.amount }}</p>
 
-<<<<<<< HEAD
-=======
+  
             <button @click="viewmore(product)">View more</button>
->>>>>>> 0f3e52543b89344788956ae9f188f87724d5d550
 
-          <button @click="viewmore">view more</button>
+
+       
 
           </div>
         </div>

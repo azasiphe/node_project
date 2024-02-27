@@ -5,11 +5,15 @@ const baseUrl = 'https://node-project-3.onrender.com';
 
 export default createStore({
   state: {
-    products: []
+    products: [],
+    users:[]
   },
   getters: {
     allProducts(state) {
       return state.products;
+    },
+    allusers(state) {
+      return state.users;
     }
     
   },
@@ -17,8 +21,8 @@ export default createStore({
     SET_PRODUCTS(state, products) {
       state.products = products;
     },
-    setProducts(state, payload) {
-      state.products = payload;
+    SET_USERS(state, users) { 
+      state.users = users; 
     }
   },
   actions: {
@@ -33,8 +37,18 @@ export default createStore({
         console.error(error);
       }
     }
-    
   ,
+  async fetchusers({commit}) {
+    try {
+      const response = await axios.get(`${baseUrl}/users`);
+      const users = await response.data; // Corrected variable name
+      if(users){
+        commit('SET_USERS', users);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  },
   async postProduct({ commit }, newItem) {
     try {
       await axios.post(baseUrl + '/products', newItem);
@@ -45,15 +59,33 @@ export default createStore({
       window.location.reload()
     }
   }
-  
  ,
-  async deleteProduct({commit}, prodID){
+ async postusers({ commit }, newItem) {
+  try {
+    await axios.post(baseUrl + '/users', newItem);
+    
+    commit('fetchusers');
+  } catch (error) {
+    console.error(error);
+    window.location.reload()
+  }
+},
+  async deleteProduct({commit}, userID){
     await axios.delete(baseUrl+`/products/${prodID}`)
+    window.location.reload()
+   },
+   async deleteusers({commit}, userID){
+    await axios.delete(baseUrl+`/users/${prodID}`)
     window.location.reload()
    },
    async editProduct({commit}, update){
     console.log(update);
     await axios.patch(baseUrl+'/products/' + update.prodID, update)
+
+   },
+   async editusers({commit}, update){
+    console.log(update);
+    await axios.patch(baseUrl+'/users/' + updateuserID, update)
 
    },
 },
