@@ -1,6 +1,7 @@
-import { pool} from '../config/config.js';
-const addUser = async (firstName, lastName, userAge, Gender, emailAdd, userPass, userProfile) => {
-    await pool.query('INSERT INTO users (firstName, lastName, userAge, Gender, emailAdd, userPass, userProfile) VALUES (?, ?, ?, ?, ?, ?, ?)', [firstName, lastName, userAge, gender, emailAdd, userPass, userProfile]);
+import { pool } from '../config/config.js';
+
+const addUser = async (firstName, lastName, Age, Gender, Role, emailAdd, userPass, userProfile) => {
+    await pool.query('INSERT INTO users (firstName, lastName, Age, Gender, Role, emailAdd, userPass, userProfile) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [firstName, lastName, Age, Gender, Role, emailAdd, userPass, userProfile]);
 };
 
 const getAllUsers = async () => {
@@ -8,8 +9,8 @@ const getAllUsers = async () => {
     return rows;
 };
 
-const updateUserById = async (id, firstName, lastName, userAge, Gender, emailAdd, userPass, userProfile) => {
-    await pool.query('UPDATE users SET firstName = ?, lastName = ?, userAge = ?, Gender = ?, emailAdd = ?, userPass = ?, userProfile = ? WHERE userID = ?', [firstName, lastName, userAge, gender, emailAdd, userPass, userProfile, id]);
+const updateUserById = async (id, firstName, lastName, Age, Gender, Role, emailAdd, userPass, userProfile) => {
+    await pool.query('UPDATE users SET firstName = ?, lastName = ?, Age = ?, Gender = ?, Role = ?, emailAdd = ?, userPass = ?, userProfile = ? WHERE userID = ?', [firstName, lastName, Age, Gender, Role, emailAdd, userPass, userProfile, id]);
 };
 
 const deleteUserById = async (id) => {

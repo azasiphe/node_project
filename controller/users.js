@@ -7,12 +7,12 @@ const getAll = async (req, res) => {
 };
 
 const addUsers = async (req, res) => {
-    const { firstName, lastName, userAge, Gender, emailAdd, userPass, userProfile } = req.body;
+    const { firstName, lastName, Age, Gender,Role, emailAdd, userPass, userProfile } = req.body;
 
     try {
         const hashedPassword = await bcrypt.hash(userPass, 10);
 
-        await addUser(firstName, lastName, userAge, Gender, emailAdd, hashedPassword, userProfile);
+        await addUser(firstName, lastName, Age, Gender,Role, emailAdd, hashedPassword, userProfile);
 
         res.status(201).json({ message: 'User created successfully' });
     } catch (error) {
@@ -23,7 +23,7 @@ const addUsers = async (req, res) => {
 
 const updateUser = async (req, res) => {
     const { id } = req.params;
-    const { firstName, lastName, userAge, Gender, emailAdd, userPass, userProfile } = req.body;
+    const { firstName, lastName, Age, Gender,Role, emailAdd, userPass, userProfile } = req.body;
 
     bcrypt.hash(userPass, 10, async (err, hash) => {
         if (err) {
@@ -32,7 +32,7 @@ const updateUser = async (req, res) => {
         }
 
         try {
-            await updateUserById(id, firstName, lastName, userAge, Gender, emailAdd, hash, userProfile);
+            await updateUserById(id, firstName, lastName, Age, Gender,Role, emailAdd, hash, userProfile);
             res.status(200).json({ message: 'User updated successfully' });
         } catch (error) {
             res.status(500).json({ error: 'Failed to update user' });
