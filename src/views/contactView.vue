@@ -1,8 +1,9 @@
 <template>
+   
     <div class="aboutus">
         <div class="row justify-content-center">
             <div class="col-8">
-                <h1 class="display-2">CONTACT US</h1>
+                <h1 class="display-2"><img class="Contact-img" src="https://i.ibb.co/GxLs0XZ/pngtree-yellow-brush-stock-clipart-png-image-8940369-removebg-preview.png" alt="background-image" loading="lazy" width="200">CONTACT US</h1>
                 <div class="inputNames">
                       <div class="form-floating m-5">
                         <input type="text" id="bname" name="bname" class="form-control" placeholder="e.g Sipho Gcusa" required>
@@ -18,7 +19,7 @@
                         <button class="mt-2 border-0 bg-danger text-dark p-2">submit</button>
                       </div>
                     </div>
-                    <div class="container-fluid m-5 ">
+                    <div class="container-lg m-5 ">
                         <div class="Card row  bg-dark text-white m-3 justify-content-end ">
                             <div class="col"><i class="bi bi-telephone"></i> Contact
                                 <p>069-292-9578</p></div>
@@ -35,6 +36,7 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <style>

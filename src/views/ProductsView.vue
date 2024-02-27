@@ -3,14 +3,13 @@
   <div class="products-search mb-4 justify-content-start">
     <button class="bilter-button space-between">Filter</button> <button>Search</button>
   </div>
-    <div class="products">
+    <div class="products container-lg">
       <div class="product-cards">
         <div v-for="product in products" :key="product.prodID" class="product-card">
           <img :src="product.prodUrl" alt="Product Image" class="product-image">
           <div class="product-details">
             <h3 class="product-name">{{ product.prodName }}</h3>
             <p class="product-amount">{{ product.amount }}</p>
-          
           </div>
         </div>
       </div>
@@ -47,7 +46,7 @@
   
   .product-card {
     border: 1px solid #dddddd;
-    border-radius: 8px;
+    border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;

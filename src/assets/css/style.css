@@ -5,10 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jolly Lodger", system-ui;
-  background-color: 120C0C;
 }
 .Home {
-    
   font-weight: 400;
   font-style: normal;
 }
@@ -22,6 +20,12 @@
 }
 .img-pic {
   border-radius: 50%;
+}
+.background-image{
+  position: absolute;
+  transform: rotate(-10deg);
+  margin-left: -3rem;
+  z-index: -1;
 }
 
 
