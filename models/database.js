@@ -33,4 +33,6 @@ const getSingle = async(prodID)=>{
 }
 
 
-export { getProducts,postProduct,deleteProduct,updateProduct ,getSingle};
+
+
+export { getProducts,postProduct,deleteProduct,updateProduct ,getSingle };
