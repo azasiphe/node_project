@@ -1,7 +1,8 @@
 <template>
 
-  <h1 class="display-1">ADMIN PAGE</h1>
+ 
     <div class="products">
+      <h1 class="display-1">ADMIN PAGE</h1>
       <div class="add-product">
         <input v-model="prodID" type="text" placeholder="ID">
         <input v-model="prodName" type="text" placeholder="Name">
@@ -9,11 +10,11 @@
         <input v-model="amount" type="number" placeholder="Amount">
     
         <input v-model="prodUrl" type="text" placeholder="Product Image URL">
-        <button @click="postProduct">Add</button>
+        <button class="add" @click="postProduct">Add</button>
       </div>
-      <table>
+      <table class="table-admin">
         <thead>
-          <tr>
+          <tr class="tb">
             <th>ID</th>
             <th>Name</th>
             <th>Quantity</th>
@@ -23,7 +24,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="tb">
           <tr v-for="product in products" :key="product.prodID">
             <td>{{ product.prodID }}</td>
             <td>{{ product.prodName }}</td>
@@ -33,115 +34,177 @@
             <td>
               <img :src="product.prodUrl" alt="Product Image" style="max-width: 100px; max-height: 100px;">
             </td>
-            <td><button @click="editProduct(product.prodID)">edit</button> </td>
-            <td><button @click="deleteProduct(product.prodID)">delete</button></td>
+            <td><button  class="edit" @click="editProduct(product.prodID)">edit</button> </td>
+            <td><button class="delete" @click="deleteProduct(product.prodID)">delete</button></td>
           </tr>
         </tbody>
       </table>
     </div>
   </template>
-  
-  <script>
-  import { onMounted, computed } from 'vue';
-  import { useStore } from 'vuex';
-  
-  export default {
-    setup() {
-      const store = useStore();
-  
-      const products = computed(() => store.getters.allProducts);
-  
-      onMounted(() => {
-        store.dispatch('fetchProducts');
-      });
-  
-      const prodID = null;
-      const prodName = null;
-      const quantity = null;
-      const amount = null;
-    
-      const prodUrl = null;
-  
-      const deleteProduct = (prodID) => {
-        store.dispatch('deleteProduct', prodID);
-      };
-  
-      const editProduct = (prodID) => {
-        const edit = {
-          prodID: prodID,
-          prodName: prodName,
-          quantity: quantity,
-          amount: amount,
-         
-          prodUrl: prodUrl
-        };
-        store.dispatch('editProduct', edit);
-      };
-  
-      const postProduct = () => {
-        const newProduct = {
-          prodName: prodName,
-          quantity: quantity,
-          amount: amount,
-         
-          prodUrl: prodUrl
-        };
-        store.dispatch('postProduct', newProduct);
-      };
-  
-      return {
-        products,
-        prodID,
-        prodName,
-        quantity,
-        amount,
-     
-        prodUrl,
-        deleteProduct,
-        editProduct,
-        postProduct
-      };
-    }
-  };
-  </script>
+ <script>
+ import { onMounted, computed, ref } from 'vue';
+ import { useStore } from 'vuex';
+ 
+ export default {
+   setup() {
+     const store = useStore();
+ 
+     const products = computed(() => store.getters.allProducts);
+ 
+     onMounted(() => {
+       store.dispatch('fetchProducts');
+     });
+ 
+     const prodID = ref(null);
+     const prodName = ref(null);
+     const quantity = ref(null);
+     const amount = ref(null);
+     const prodUrl = ref(null);
+     const editMode = ref(false);
+     let editProductId = null;
+ 
+     const deleteProduct = (prodID) => {
+       store.dispatch('deleteProduct', prodID);
+     };
+ 
+     const editProduct = (product) => {
+       editMode.value = true;
+       editProductId = product.prodID;
+       prodID.value = product.prodID;
+       prodName.value = product.prodName;
+       quantity.value = product.quantity;
+       amount.value = product.amount;
+       prodUrl.value = product.prodUrl;
+     };
+ 
+     const saveEdit = () => {
+       const editedProduct = {
+         prodID: prodID.value,
+         prodName: prodName.value,
+         quantity: quantity.value,
+         amount: amount.value,
+         prodUrl: prodUrl.value
+       };
+       store.dispatch('updateProduct', editedProduct);
+       editMode.value = false;
+       clearFields();
+     };
+ 
+     const clearFields = () => {
+       prodID.value = null;
+       prodName.value = null;
+       quantity.value = null;
+       amount.value = null;
+       prodUrl.value = null;
+     };
+ 
+     const cancelEdit = () => {
+       editMode.value = false;
+       clearFields();
+     };
+ 
+     const postProduct = () => {
+       const newProduct = {
+         prodName: prodName.value,
+         quantity: quantity.value,
+         amount: amount.value,
+         prodUrl: prodUrl.value
+       };
+       store.dispatch('postProduct', newProduct);
+       clearFields();
+     };
+ 
+     return {
+       products,
+       prodID,
+       prodName,
+       quantity,
+       amount,
+       prodUrl,
+       editMode,
+       editProduct,
+       saveEdit,
+       cancelEdit,
+       deleteProduct,
+       postProduct
+     };
+   }
+ };
+ </script>
 
 
 
  
  
   <style scoped>
+
+
+.products{
+    background-image: url(https://i.ibb.co/j3V3q0P/images-4.jpg);
+    background-size: cover;
+    width: 100%;
+  }
   table {
     width: 100%;
     border-collapse: collapse;
   }
   
   th, td {
-    border: 1px solid #dddddd;
+    border: 1px solid black;
     text-align: left;
     padding: 5px;
   }
   
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+ 
   .add-product {
   display: flex;
-  padding:18px;
+  padding:20px;
+  gap:10px;
+  margin: 0 0 0 8%;
+  border: 5px;
+ border-radius: 20px solid black;
+  
 }
-
+.edit{
+  padding: 13px;
+  border: 4px;
+  border-radius: 11px;
+  background-color: white;
+  color: black;
+}
+.delete{
+  padding: 10px;
+  border: 3px;
+  border-radius: 10px;
+  background-color: black;
+  color: yellow;
+  
+}
+.delete:hover{
+  background-color: purple;
+}
+.edit:hover{
+  background-color: purple;
+}
 .input-field {
   margin-right: 10px;
 }
 
-.add-button {
+.add {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: purple;
   color: white;
-  border: none;
+  border-radius: 5px  ;
   cursor: pointer;
 }
 
 .add-button:hover {
   background-color: #0056b3;
 }
+
+
+
+
+
+
   </style>

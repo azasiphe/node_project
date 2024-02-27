@@ -5,6 +5,7 @@
     <router-link to="/products">Products</router-link> |
     <router-link to="/admin">Admin</router-link> |
     <router-link to="/contact">Contact</router-link>
+    <router-link to="/view"></router-link>
   </nav>
   <router-view/>
 </template>
