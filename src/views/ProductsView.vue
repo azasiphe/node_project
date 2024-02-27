@@ -1,7 +1,9 @@
 <template>
   <h1 class="display-1">PRODUCT PAGE</h1>
   <div class="products-search mb-4 justify-content-start">
-    <button class="bilter-button space-between">Filter</button> <button>Search</button>
+    <button class="bilter-button space-between" id="filter">Filter</button>
+    <input>
+    <button @click="search" id="search" for="searchInput" onclick="sortAlphabetically()">Search</button>
   </div>
     <div class="products">
       <div class="product-cards">
@@ -10,7 +12,7 @@
           <div class="product-details">
             <h3 class="product-name">{{ product.prodName }}</h3>
             <p class="product-amount">{{ product.amount }}</p>
-          
+          <button @click="viewmore">view more</button>
           </div>
         </div>
       </div>

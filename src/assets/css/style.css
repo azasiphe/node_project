@@ -24,12 +24,14 @@
   border-radius: 50%;
 }
 
-
-
-
-
-
-
-
-
-
+#filter{
+margin-right: 80%;
+padding: 10px;
+}
+#search{
+  padding: 10px;
+}
+input{
+  padding: 10px;
+  border-radius: 10px;
+}

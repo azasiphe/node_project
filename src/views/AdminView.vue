@@ -1,7 +1,8 @@
 <template>
 
-  <h1 class="display-1">ADMIN PAGE</h1>
+ 
     <div class="products">
+      <h1 class="display-1">ADMIN PAGE</h1>
       <div class="add-product">
         <input v-model="prodID" type="text" placeholder="ID">
         <input v-model="prodName" type="text" placeholder="Name">
@@ -11,9 +12,9 @@
         <input v-model="prodUrl" type="text" placeholder="Product Image URL">
         <button class="add" @click="postProduct">Add</button>
       </div>
-      <table>
+      <table class="table-admin">
         <thead>
-          <tr>
+          <tr class="tb">
             <th>ID</th>
             <th>Name</th>
             <th>Quantity</th>
@@ -23,7 +24,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="tb">
           <tr v-for="product in products" :key="product.prodID">
             <td>{{ product.prodID }}</td>
             <td>{{ product.prodName }}</td>
@@ -137,6 +138,7 @@
  
   <style scoped>
 
+
 .products{
     background-image: url(https://i.ibb.co/j3V3q0P/images-4.jpg);
     background-size: cover;
@@ -199,4 +201,10 @@
 .add-button:hover {
   background-color: #0056b3;
 }
+
+
+
+
+
+
   </style>

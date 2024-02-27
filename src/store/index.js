@@ -42,6 +42,7 @@ export default createStore({
       commit('fetchProducts');
     } catch (error) {
       console.error(error);
+      window.location.reload()
     }
   }
   
