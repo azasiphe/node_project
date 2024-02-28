@@ -1,12 +1,15 @@
 <template>
   <h1 class="display-1">PRODUCT PAGE</h1>
 
+
     <div class="products">
 
-    <button class="bilter-button space-between" id="filter">Filter</button>
-    <input>
-    <button @click="search" id="search" for="searchInput" onclick="sortAlphabetically()">Search</button>
-  </div>
+      <button class="filter-button space-between" @click="toggleSort" id="filter">Sort </button>
+      <input v-model="searchInput" placeholder="" class="search-input">
+      <button @click="search" class="search-button">Search</button>
+    </div>
+
+
     <div class="products container-lg">
 
       <div class="product-cards">
@@ -16,11 +19,12 @@
             <h3 class="product-name">{{ product.prodName }}</h3>
             <p class="product-amount">{{ product.amount }}</p>
 
-  
+
             <button @click="viewmore(product)">View more</button>
 
 
-       
+
+
 
           </div>
         </div>
@@ -139,7 +143,7 @@ export default {
   .product-image {
     width: 100%;
     height: 200px;
-    object-fit: contain; /* Ensures entire image is visible without distortion */
+    object-fit: contain; 
   }
   
   .product-details {
