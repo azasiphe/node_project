@@ -2,7 +2,11 @@
 
  
     <div class="products">
-      <h1 class="display-1">ADMIN PAGE</h1>
+      <h1 class="display-1">
+        <router-link :to="{ name: currentPage === 'admin' ? 'user' : 'admin' }">
+          {{ currentPage === 'admin' ? 'USERS PAGE' : 'ADMIN PAGE' }}
+        </router-link>
+      </h1>
       
       <div class="add-product">
         <input v-model="prodID" type="text" placeholder="ID">
@@ -47,6 +51,11 @@
  import { useStore } from 'vuex';
  
  export default {
+  computed: {
+      currentPage() {
+        return this.$route.name;
+      }
+    },
    setup() {
      const store = useStore();
  
@@ -54,7 +63,9 @@
  
      onMounted(() => {
        store.dispatch('fetchProducts');
+       
      });
+     
  
      const prodID = ref(null);
      const prodName = ref(null);
@@ -114,6 +125,7 @@
        store.dispatch('postProduct', newProduct);
        clearFields();
      };
+     
  
      return {
        products,
