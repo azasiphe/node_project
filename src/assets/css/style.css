@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jolly Lodger", system-ui;
+  /* background-color: rgb(18, 18, 18); */
+}
+
+body{
+  overflow-x: hidden;
 }
 .Home {
   font-weight: 400;

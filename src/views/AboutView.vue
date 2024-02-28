@@ -1,7 +1,11 @@
 <template>
   <div class="about">
     <div class="row mt-5 justify-content-center">
-      <div class="col-3 display-1 mt-5">About Us</div>
+      <div class="col-3">
+        <div class="Abt-img">
+          <img src="https://i.ibb.co/7br35D2/Screenshot-2024-02-28-135701-removebg-preview.png" alt="about-us-img">
+        </div>
+      </div>
       <div class="col-5 lead">
         <p>
           Welcome to GAaNA's Art Gallery, a vibrant space that emerged in 2022, born from the visionary minds of Asisipho Gcusa and Azasipe Ndoro. Named in honor of their profound commitment to art and community, GAaNA's Art Gallery stands as a beacon of inspiration within their township environment. 
@@ -19,17 +23,33 @@
     </div>
     <div class="">
       <div class="row justify-content-center mt-5">
-        <div class="col-1">Founders:</div>
-        <div class="col-2">
+        <div class="col-2 display-4">Founders:</div>
+        <div class="col-3">
           <div class="row">
-            <div class="col"><img src="https://i.ibb.co/bzBXw6q/IMG-20240210-WA0028.jpg" alt="" loading="lazy" height="100" class="img-pic"></div>
-            <div class="col">Azasiphe Ndoro</div>
+            <div class="col">
+              <div class="container">
+                <img src="https://i.ibb.co/bzBXw6q/IMG-20240210-WA0028.jpg" alt="sefie-logo" loading="lazy" height="100" class="img-pic">
+                <div class="text-section">
+                  <h2>Azasiphe Ndoro</h2>
+                  <p>Azasipe have fostered a thriving partnership, dedicated to showcasing affordable and impactful works that resonate with the spirit of their community.</p>
+                </div>
+                <img src="https://i.ibb.co/bzBXw6q/IMG-20240210-WA0028.jpg" alt="selfie-profile" loading="lazy" height="150" class="img-picture">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-3">
           <div class="row">
-            <div class="col"><img src="" alt="" loading="lazy"></div>
-            <div class="col">Asisipho Gcusa</div>
+            <div class="col">
+              <div class="container">
+                <img src="https://i.ibb.co/KqGZYH2/122078978-371053247376812-3536115294280722888-n-removebg-preview.png" alt="sefie-logo" loading="lazy" height="100" class="img-pic">
+                <div class="text-section">
+                  <h2>Asisipho Gcusa</h2>
+                  <p>Azasipe have fostered a thriving partnership, dedicated to showcasing affordable and impactful works that resonate with the spirit of their community.</p>
+                </div>
+                <img src="https://i.ibb.co/KqGZYH2/122078978-371053247376812-3536115294280722888-n-removebg-preview.png" alt="selfie-profile" loading="lazy" height="150" class="img-picture">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -41,7 +61,63 @@
 .col-5{
   margin-top: 9rem;
 }
-.display-1{
-  transform: rotate(-90deg);
+.Abt-img{
+  position: absolute;
+  margin-left: -8rem;
+  margin-top: 5rem;
+}
+.container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  transition: all 0.5s ease-out;
+}
+.img-pic{
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  object-fit: cover;
+  filter: drop-shadow(0 0 5px purple);
+  transition: all 0.5s ease-out;
+}
+.container:hover .img-pic{
+  scale: 0;
+}
+.container:hover{
+  width: 350px;
+  height: 160px;
+  border-radius: 15px;
+  background: #111;
+  border: 1px solid red;
+}
+.text-section{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 220px;
+  opacity: 0;
+  color: #fff;
+  transition: all 0.5s ease-out;
+}
+.container:hover .text-section{
+  opacity: 1;
+}
+.img-picture{
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  rotate: 10deg;
+  transition: all 0.5s ease-out;
+}
+.container:hover .img-picture{
+  opacity: 1;
 }
 </style>

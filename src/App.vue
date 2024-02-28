@@ -9,7 +9,9 @@
   </nav>
   <router-view/>
 </template>
+<script>
 
+</script>
 <style>
 #app {
   font-family: 'Times New Roman', Times, serif;
