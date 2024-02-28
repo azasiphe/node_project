@@ -41,7 +41,7 @@ export default createStore({
   async fetchusers({commit}) {
     try {
       const response = await axios.get(`${baseUrl}/users`);
-      const users = await response.data; // Corrected variable name
+      const users = await response.data; 
       if(users){
         commit('SET_USERS', users);
       }
@@ -70,15 +70,15 @@ export default createStore({
     window.location.reload()
   }
 },
-  async deleteProduct({commit}, userID){
+  async deleteProduct({commit}, prodID){
     await axios.delete(baseUrl+`/products/${prodID}`)
     window.location.reload()
    },
    async deleteusers({commit}, userID){
-    await axios.delete(baseUrl+`/users/${prodID}`)
+    await axios.delete(baseUrl+`/users/${userID}`)
     window.location.reload()
    },
-   async editProduct({commit}, update){
+   async editproduct({commit}, update){
     console.log(update);
     await axios.patch(baseUrl+'/products/' + update.prodID, update)
 

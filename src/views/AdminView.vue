@@ -46,109 +46,107 @@
       </table>
     </div>
   </template>
- <script>
- import { onMounted, computed, ref } from 'vue';
- import { useStore } from 'vuex';
- 
- export default {
+<script>
+import { onMounted, computed, ref } from 'vue';
+import { useStore } from 'vuex';
+
+export default {
   computed: {
-      currentPage() {
-        return this.$route.name;
+    currentPage() {
+      return this.$route.name;
+    }
+  },
+  setup() {
+    const store = useStore();
+
+    const products = computed(() => store.getters.allProducts);
+
+    onMounted(() => {
+      store.dispatch('fetchProducts');
+    });
+
+    const prodID = ref(null);
+    const prodName = ref(null);
+    const quantity = ref(null);
+    const amount = ref(null);
+    const prodUrl = ref(null);
+    const editMode = ref(false);
+    let editproduct = null;
+
+    const deleteProduct = (prodID) => {
+      const confirmDelete = window.confirm('Are you sure you want to delete this product?');
+      if (confirmDelete) {
+        store.dispatch('deleteProduct', prodID);
+        window.alert('Product has been deleted.');
       }
-    },
-   setup() {
-     const store = useStore();
- 
-     const products = computed(() => store.getters.allProducts);
- 
-     onMounted(() => {
-       store.dispatch('fetchProducts');
-       
-     });
-     
- 
-     const prodID = ref(null);
-     const prodName = ref(null);
-     const quantity = ref(null);
-     const amount = ref(null);
-     const prodUrl = ref(null);
-     const editMode = ref(false);
-     let editProductId = null;
- 
-     const deleteProduct = (prodID) => {
-       store.dispatch('deleteProduct', prodID);
-     };
- 
-     const editProduct = (product) => {
-       editMode.value = true;
-       editProductId = product.prodID;
-       prodID.value = product.prodID;
-       prodName.value = product.prodName;
-       quantity.value = product.quantity;
-       amount.value = product.amount;
-       prodUrl.value = product.prodUrl;
-     };
- 
-     const saveEdit = () => {
-       const editedProduct = {
-         prodID: prodID.value,
-         prodName: prodName.value,
-         quantity: quantity.value,
-         amount: amount.value,
-         prodUrl: prodUrl.value
-       };
-       store.dispatch('updateProduct', editedProduct);
-       editMode.value = false;
-       clearFields();
-     };
- 
-     const clearFields = () => {
-       prodID.value = null;
-       prodName.value = null;
-       quantity.value = null;
-       amount.value = null;
-       prodUrl.value = null;
-     };
- 
-     const cancelEdit = () => {
-       editMode.value = false;
-       clearFields();
-     };
- 
-     const postProduct = () => {
-       const newProduct = {
-         prodName: prodName.value,
-         quantity: quantity.value,
-         amount: amount.value,
-         prodUrl: prodUrl.value
-       };
-       store.dispatch('postProduct', newProduct);
-       clearFields();
-     };
-     
- 
-     return {
-       products,
-       prodID,
-       prodName,
-       quantity,
-       amount,
-       prodUrl,
-       editMode,
-       editProduct,
-       saveEdit,
-       cancelEdit,
-       deleteProduct,
-       postProduct
-     };
-   }
- };
- </script>
+    };
 
+    const editProduct = (product) => {
+  editMode.value = true;
+  editproductId = product.prodID;
+  prodID.value = product.prodID;
+  prodName.value = product.prodName;
+  quantity.value = product.quantity;
+  amount.value = product.amount;
+  prodUrl.value = product.prodUrl;
+};
 
+    const saveEdit = () => {
+      const editedproduct = {
+        prodID: prodID.value,
+        prodName: prodName.value,
+        quantity: quantity.value,
+        amount: amount.value,
+        prodUrl: prodUrl.value
+      };
+      store.dispatch('updateProduct', editedproduct);
+      editMode.value = false;
+      clearFields();
+    };
 
- 
- 
+    const clearFields = () => {
+      prodID.value = null;
+      prodName.value = null;
+      quantity.value = null;
+      amount.value = null;
+      prodUrl.value = null;
+    };
+
+    const cancelEdit = () => {
+      editMode.value = false;
+      clearFields();
+    };
+
+    const postProduct = () => {
+      const newProduct = {
+        prodName: prodName.value,
+        quantity: quantity.value,
+        amount: amount.value,
+        prodUrl: prodUrl.value
+      };
+      store.dispatch('postProduct', newProduct);
+      clearFields();
+      window.alert('Product has been added.');
+    };
+
+    return {
+      products,
+      prodID,
+      prodName,
+      quantity,
+      amount,
+      prodUrl,
+      editMode,
+      editproduct,
+      saveEdit,
+      cancelEdit,
+      deleteProduct,
+      postProduct
+    };
+  }
+};
+</script>
+
   <style scoped>
 
 

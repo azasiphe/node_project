@@ -4,7 +4,20 @@
         <router-link :to="{ name: currentPage === 'admin' ? 'user' : 'admin' }">
           {{ currentPage === 'admin' ? 'USERS PAGE' : 'ADMIN PAGE' }}
         </router-link>
-      </h1>
+      </h1>  
+      <div>
+    <input v-model="userID" type="text" placeholder="ID">
+    <input v-model="firstName" type="text" placeholder="First Name">
+    <input v-model="lastName" type="text" placeholder="Last Name">
+    <input v-model="Age" type="number" placeholder="Age">
+    <input v-model="Gender" type="text" placeholder="Gender">
+    <input v-model="Role" type="text" placeholder="Role">
+    <input v-model="emailAdd" type="text" placeholder="Email">
+    <input v-model="userpadd" type="text" placeholder="userpass">
+    <input v-model="userProfile" type="text" placeholder="User Profile">
+    <button class="add" @click="postUser">Add</button>
+  </div>
+
       <table>
         <thead>
           <tr>
@@ -16,6 +29,8 @@
             <th>Role</th>
             <th>Email</th>
             <th>User Profile</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +43,9 @@
             <td>{{ user.Role }}</td>
             <td>{{ user.emailAdd }}</td>
             <td>{{ user.userProfile }}</td>
+            <td><button  class="edit" @click="editUser(user.userID)">edit</button> </td>
+        <td><button class="delete" @click="deleteUser(user.userID)">delete</button></td>
+      
           </tr>
         </tbody>
       </table>
