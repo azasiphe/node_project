@@ -59,8 +59,9 @@ export default {
     };
 
     const viewmore = (product) => {
-      router.push({ name: 'view', params: { id: product.prodID } });
-    };
+  router.push({ name: 'view', params: { id: product.prodID } });
+};
+
 
     const sortedProducts = computed(() => {
       return search().sort((a, b) => {

@@ -60,16 +60,21 @@ export default createStore({
     }
   }
  ,
- async postusers({ commit }, newItem) {
+ async postusers({ commit, state }, newItem) {
   try {
     await axios.post(baseUrl + '/users', newItem);
     
-    commit('fetchusers');
+  
+    const updatedUsers = [...state.users, newItem];
+    commit('SET_USERS', updatedUsers);
+    
+    window.alert('User has been added.');
   } catch (error) {
     console.error(error);
-    window.location.reload()
+    window.location.reload();
   }
-},
+}
+,
   async deleteProduct({commit}, prodID){
     await axios.delete(baseUrl+`/products/${prodID}`)
     window.location.reload()
@@ -85,7 +90,7 @@ export default createStore({
    },
    async editusers({commit}, update){
     console.log(update);
-    await axios.patch(baseUrl+'/users/' + updateuserID, update)
+    await axios.patch(baseUrl+'/users/' + update.userID, update)
 
    },
 },

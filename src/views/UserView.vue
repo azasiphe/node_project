@@ -53,7 +53,7 @@
   </template>
   
   <script>
-  import { onMounted, computed } from 'vue';
+  import { onMounted, computed,ref } from 'vue';
   import { useStore } from 'vuex';
   
   export default {
@@ -66,8 +66,61 @@
         store.dispatch('fetchusers');
       });
   
+      const userID = ref(null);
+    const firstName = ref(null);
+    const lastName = ref(null);
+    const Age = ref(null);
+    const Gender = ref(null);
+    const Role = ref(null);
+    const emailAdd = ref(null);
+    const userpadd = ref(null);
+    const userProfile = ref(null);
+
+    const deleteUser = (userID) => {
+      const confirmDelete = window.confirm('Are you sure you want to delete this user?');
+      if (confirmDelete) {
+        store.dispatch('deleteusers', userID);
+        window.alert('User has been deleted.');
+      }
+    };
+
+
+    const postUser = () => {
+      const newUser = {
+       
+        firstName: firstName.value,
+        lastName: lastName.value,
+        Age: Age.value,
+        Gender: Gender.value,
+        Role: Role.value,
+        emailAdd: emailAdd.value,
+        userpadd: userpadd.value,
+        userProfile: userProfile.value
+      };
+      store.dispatch('postusers', newUser);
+      
+      clearFields();
+      window.alert('User has been added.');
+    };
+
+    const clearFields = () => {
+      userID.value = null;
+      firstName.value = null;
+      lastName.value = null;
+      Age.value = null;
+      Gender.value = null;
+      Role.value = null;
+      emailAdd.value = null;
+      userpadd.value = null;
+      userProfile.value = null;
+    };
+
+
       return {
         users,
+        clearFields,
+        postUser,
+        deleteUser,
         currentPage() {
           return this.$route.name;
         }

@@ -28,7 +28,9 @@
      </div>
  </div>
 </template>
+<script>
 
+</script>
 <style scoped>
 .display-4{
     position: absolute;
@@ -39,9 +41,7 @@
 .template{
     background-image: url('https://i.ibb.co/rwQpf6G/istockphoto-538478165-612x612.jpg');
 }
-#divide{
-    /* margin-right: 1px; */
-}
+
 .Portrait-btn {
     /* align-self: flex-start; */
     /* position: sticky; */
