@@ -1,13 +1,10 @@
 <template>
-
- 
-    <div class="products">
+    <div class="products vh-100">
       <h1 class="display-1">
         <router-link :to="{ name: currentPage === 'admin' ? 'user' : 'admin' }">
           {{ currentPage === 'admin' ? 'USERS PAGE' : 'ADMIN PAGE' }}
         </router-link>
       </h1>
-      
       <div class="add-product">
         <input v-model="prodID" type="text" placeholder="ID">
         <input v-model="prodName" type="text" placeholder="Name">

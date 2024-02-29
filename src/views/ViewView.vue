@@ -59,7 +59,7 @@
 }
 .bg-dark{
     border-radius: 20px;
-    opacity:  .8;
+    opacity:  .9;
 }
 
 .product {

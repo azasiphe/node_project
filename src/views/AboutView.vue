@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about vh-100">
     <div class="row mt-5 justify-content-center">
       <div class="col-3">
         <div class="Abt-img">

@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Jolly Lodger", system-ui;
-  /* background-color: rgb(18, 18, 18); */
+  /* background-color: "dark" !important; */
 }
 
 body{
@@ -34,13 +34,12 @@ body{
 }
 
 #filter{
-margin-right: 80%;
+margin-right: 70%;
 padding: 10px;
-}
-#search{
-  padding: 10px;
+border-radius: 10px;
 }
 input{
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
+  width: 15%;
 }

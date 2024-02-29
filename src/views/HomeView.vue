@@ -1,5 +1,5 @@
 <template>
-<div class="Home">
+<div class="Home vh-100">
   <h1 class="Home-header">GAaNA's</h1>
   <h3 class="home-header"><img class="background-image" src="https://i.ibb.co/GxLs0XZ/pngtree-yellow-brush-stock-clipart-png-image-8940369-removebg-preview.png" alt="background-image" loading="lazy" width="200"><span class="art-header">ART</span> GALLERY</h3>
   <div>

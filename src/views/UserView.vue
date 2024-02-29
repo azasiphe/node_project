@@ -1,5 +1,5 @@
 <template>
-    <div class="users-table">
+    <div class="users-table vh-100">
       <h1 class="display-1">
         <router-link :to="{ name: currentPage === 'admin' ? 'user' : 'admin' }">
           {{ currentPage === 'admin' ? 'USERS PAGE' : 'ADMIN PAGE' }}
