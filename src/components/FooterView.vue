@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="container-fluid bg-dark py-1">
     <p>Copyright &copy; 2024 All Rights Reserved.</p>
   </footer>
 </template>
@@ -17,10 +17,10 @@ export default {
 <style scoped>
 footer{
   background-color: #1A1E25;
-  color: aqua;
+  color: yellow;
 }
 footer p{
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
 }
 

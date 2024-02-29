@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <nav class="navbar navbar-expand-lg text-white p-3">
       <div class="container-fluid">
@@ -23,8 +24,9 @@
         <a class="navbar-brand" href="#">Navbar</a>
         
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <button @click="show" class="list">Price list</button>
+         
+            <button @click="show" class="list" target="_blank">Price list</button>
+            <li class="nav-item">
             <a class="nav-link" href="#">Register</a>
           </li>
         </ul>
@@ -32,24 +34,17 @@
     </nav>
 
     <div class="price-list-container">
-    
-     
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      showImage: false
-    };
-  },
-  show() {
-      
+  methods: {
+    show() {
       window.open('https://i.ibb.co/B6kNgqw/Black-And-Yellow-Minimalist-Photography-Pricelist.png', '_blank');
     }
-  
+  }
 }
 </script>
 
@@ -82,4 +77,5 @@ nav {
 .price-list-image {
   margin-top: 10px;
 }
+
 </style>

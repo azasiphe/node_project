@@ -1,25 +1,24 @@
 <template>
-  <div >
-
-  </div>
-  <h1 class="display-1">PRODUCT PAGE</h1>
-    <div class="products">
-      <button class="filter-button space-between" @click="toggleSort" id="filter">Sort </button>
-      <input v-model="searchInput" placeholder="" class="search-input">
-      <button @click="search" class="search-button">Search</button>
-    </div>
-    <div class="products container-lg">
-      <div class="product-cards">
-        <div v-for="product in sortedProducts" :key="product.prodID" class="product-card">
-          <img :src="product.prodUrl" alt="Product Image" class="product-image">
-          <div class="product-details">
-            <h3 class="product-name">{{ product.prodName }}</h3>
-            <p class="product-amount">{{ product.amount }}</p>
-            <button @click="viewmore(product)">View more</button>
+  <div class="product-page vh-100">
+    <h1 class="display-1 text-warning mt-2">PRODUCT PAGE</h1>
+      <div class="products mx-5 mb-3">
+        <button class="filter-button space-between border-0 bg-dark text-" @click="toggleSort" id="filter">Sort </button>
+        <input v-model="searchInput" placeholder="Search Product" class="search-input bg-dark">
+        <button @click="search" class="search-button border-0 bg-dark">Search</button>
+      </div>
+      <div class="products container-lg mb-3">
+        <div class="product-cards">
+          <div v-for="product in sortedProducts" :key="product.prodID" class="product-card bg-dark border-0 text-warning">
+            <img :src="product.prodUrl" alt="Product Image" class="product-image mt-2">
+            <div class="product-details">
+              <h3 class="product-name">{{ product.prodName }}</h3>
+              <p class="product-amount">{{ product.amount }}</p>
+              <button @click="viewmore(product)">View more</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+  </div>
 </template>
 
 
@@ -86,16 +85,10 @@ export default {
 }
 
 .product-card {
-  border: 1px solid #dddddd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
 }
 
-.product-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .product-image {
   width: 100%;
@@ -103,42 +96,7 @@ export default {
   object-fit: contain; 
 }
 
-.product-details {
-  padding: 10px;
-}
 
-.product-name {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.product-amount,
-.product-quantity {
-  margin: 5px 0;
-  font-size: 14px;
-}
-
-
-  
-  .product-card {
-    border: 1px solid #dddddd;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .product-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: contain; 
-  }
-  
   .product-details {
     padding: 10px;
   }
@@ -149,15 +107,21 @@ export default {
     font-weight: bold;
   }
   
-  .product-amount,
-  .product-quantity {
+  .product-amount, .product-quantity {
     margin: 5px 0;
     font-size: 14px;
   }
-  .display-1{
+  .product-page{
     background-image: url('https://i.ibb.co/YtRSYhS/istockphoto-538478165-612x612.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.search-input{
+  opacity: .6;
+}
+.search-button{
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
 }
   </style>
   
