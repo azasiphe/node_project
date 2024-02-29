@@ -40,12 +40,9 @@
     margin-top: 15rem;
     transform: rotate(90deg);   
 }
-
 .template{
     background-image: url('https://i.ibb.co/rwQpf6G/istockphoto-538478165-612x612.jpg');
 }
-
-
 .bg-image{
     background-image: url('https://i.ibb.co/YtRSYhS/istockphoto-538478165-612x612.jpg');
     background-size: cover;

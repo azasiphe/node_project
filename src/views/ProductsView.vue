@@ -2,7 +2,7 @@
   <div class="product-page vh-100">
     <h1 class="display-1 text-warning mt-2">PRODUCT PAGE</h1>
       <div class="products mx-5 mb-3">
-        <button class="filter-button space-between border-0 bg-dark text-" @click="toggleSort" id="filter">Sort </button>
+        <button class="filter-button border-0 bg-dark text-" @click="toggleSort" id="filter">Sort </button>
         <input v-model="searchInput" placeholder="Search Product" class="search-input bg-dark">
         <button @click="search" class="search-button border-0 bg-dark">Search</button>
       </div>
