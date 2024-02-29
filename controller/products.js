@@ -1,5 +1,3 @@
-
-
 import  { getProducts,postProduct,deleteProduct,updateProduct,getSingle } from '../models/database.js';
 
 const getMany = async (req, res) => {
