@@ -1,12 +1,12 @@
 <template>
-  <div class="about vh-100">
+  <div class="container-fluid about">
     <div class="row mt-5 justify-content-center">
-      <div class="col-3">
+      <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="Abt-img">
           <img src="https://i.ibb.co/7br35D2/Screenshot-2024-02-28-135701-removebg-preview.png" alt="about-us-img">
         </div>
       </div>
-      <div class="col-5 lead">
+      <div class="col-lg-5 col-md-8 col-sm-12 lead">
         <p>
           Welcome to GAaNA's Art Gallery, a vibrant space that emerged in 2022, born from the visionary minds of Asisipho Gcusa and Azasipe Ndoro. Named in honor of their profound commitment to art and community, GAaNA's Art Gallery stands as a beacon of inspiration within their township environment. 
         </p>
@@ -14,17 +14,16 @@
           With a passion for making art accessible, Asisipho and Azasipe have fostered a thriving partnership, dedicated to showcasing affordable and impactful works that resonate with the spirit of their community. From paintings to sculptures, each piece tells a unique story, inviting visitors to explore the rich tapestry of creativity and culture. Step inside and experience the beauty, diversity, and shared vision that define GAaNA's Art Gallery.
         </p>
       </div>
-      <div class="col-1">
-
-      </div>
-      <div class="col-2">
+      <div class="col-lg-1 d-lg-block d-none"></div>
+      <div class="col-lg-2 col-md-4 col-sm-6">
         <img src="https://i.ibb.co/XbnpFfK/Screenshot-2024-02-26-143808.png" alt="Screenshot-2024-02-26-143808" loading="lazy" height="500" width="300">
       </div>
     </div>
-    <div class="">
-      <div class="row justify-content-center mt-5">
-        <div class="col-2 display-4">Founders:</div>
-        <div class="col-3">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg- col-md-4">
+        <div class="display-4">Founders:</div>
+      </div>
+        <div class="col-lg-3 col-md-8 col-sm-12">
           <div class="row">
             <div class="col">
               <div class="container">
@@ -38,7 +37,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-lg-3 col-md-8 col-sm-12">
           <div class="row">
             <div class="col">
               <div class="container">
@@ -52,18 +51,20 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
 
-<style scoped>   
+<style scoped>
+.about {
+  padding: 20px;
+}  
 .col-5{
   margin-top: 9rem;
 }
 .Abt-img{
-  position: absolute;
-  margin-left: -8rem;
+  /* position: absolute;
+  margin-left: -8rem; */
   margin-top: 5rem;
 }
 .container{
@@ -85,7 +86,7 @@
   transition: all 0.5s ease-out;
 }
 .container:hover .img-pic{
-  scale: 0;
+  transform: scale(0);
 }
 .container:hover{
   width: 350px;
@@ -114,7 +115,7 @@
   height: auto;
   object-fit: cover;
   opacity: 0;
-  rotate: 10deg;
+  transform: rotate(10deg);
   transition: all 0.5s ease-out;
 }
 .container:hover .img-picture{
