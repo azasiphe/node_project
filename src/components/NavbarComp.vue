@@ -1,43 +1,56 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg text-white p-3">
   <div class="container-fluid">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav gap-4">
       <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
+        <router-link to="/" class="navlink">Home</router-link> |
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/AboutView.vue">About</a>
+        <router-link to="/about" class="navlink">About</router-link> |
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ProductsView.vue">Products</a>
+        <router-link to="/products" class="navlink">Products</router-link> |
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/AdminView.vue">Admin</a>
+        <router-link to="/admin" class="navlink">Admin</router-link> |
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contactView.vue">Contact</a>
+        <router-link to="/contact" class="navlink">Contact</router-link>
       </li>
     </ul>
     
-    <!-- Logo in the middle -->
-    <a class="navbar-brand mx-auto" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Navbar</a>
     
-    <!-- Register link at the end -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="#">Register</a>
       </li>
     </ul>
-    
-    <!-- Toggler button for mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Other navbar links can be added here -->
-    </div>
-  </div>
+</div>
 </nav>
 </template>
+
+<script>
+export default {
+  components:{
+
+  }
+}
+</script>
+
+<style scoped>
+nav{
+  background-color: #1A1E25;
+}
+.navlink{
+  color: white;
+}
+.nav-link{
+  color: yellow;
+}
+/* footer p{
+  padding: 40px 0;
+  text-align: center;
+} */
+
+</style>

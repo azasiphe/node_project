@@ -84,24 +84,28 @@
       }
     };
 
-
-    const postUser = () => {
-      const newUser = {
-       
-        firstName: firstName.value,
-        lastName: lastName.value,
-        Age: Age.value,
-        Gender: Gender.value,
-        Role: Role.value,
-        emailAdd: emailAdd.value,
-        userpadd: userpadd.value,
-        userProfile: userProfile.value
-      };
-      store.dispatch('postusers', newUser);
-      
-      clearFields();
-      window.alert('User has been added.');
-    };
+    const postUser = async () => {
+  const newUser = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    Age: Age.value,
+    Gender: Gender.value,
+    Role: Role.value,
+    emailAdd: emailAdd.value,
+    userpadd: userpadd.value,
+    userProfile: userProfile.value
+  };
+  
+  try {
+    await store.dispatch('postusers', newUser);
+    users.value.push(newUser);
+    clearFields();
+    window.alert('User has been added.');
+  } catch (error) {
+    console.error(error);
+    window.alert('Failed to add user.');
+  }
+};
 
     const clearFields = () => {
       userID.value = null;

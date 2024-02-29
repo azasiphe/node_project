@@ -1,36 +1,28 @@
 <template>
+  <div >
+
+  </div>
   <h1 class="display-1">PRODUCT PAGE</h1>
-
-
     <div class="products">
-
       <button class="filter-button space-between" @click="toggleSort" id="filter">Sort </button>
       <input v-model="searchInput" placeholder="" class="search-input">
       <button @click="search" class="search-button">Search</button>
     </div>
-
-
     <div class="products container-lg">
-
       <div class="product-cards">
         <div v-for="product in sortedProducts" :key="product.prodID" class="product-card">
           <img :src="product.prodUrl" alt="Product Image" class="product-image">
           <div class="product-details">
             <h3 class="product-name">{{ product.prodName }}</h3>
             <p class="product-amount">{{ product.amount }}</p>
-
-
             <button @click="viewmore(product)">View more</button>
-
-
-
-
-
           </div>
         </div>
       </div>
     </div>
 </template>
+
+
 <script>
 import { onMounted, computed, ref } from 'vue';
 import { useStore } from 'vuex';
@@ -162,5 +154,10 @@ export default {
     margin: 5px 0;
     font-size: 14px;
   }
+  .display-1{
+    background-image: url('https://i.ibb.co/YtRSYhS/istockphoto-538478165-612x612.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
   </style>
   

@@ -151,7 +151,7 @@ export default {
 
 
 .products{
-    background-image: url();
+    background-image: url('https://i.ibb.co/ftTYC1L/images-4.jpg');
     background-size: cover;
     width: 100%;
   }

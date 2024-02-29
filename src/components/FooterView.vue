@@ -5,7 +5,13 @@
 </template>
 
 <script>
-
+export default {
+        data() {
+            return{
+                currYear: new Date().getFullYear()
+            }
+        }
+    }
 </script>
 
 <style scoped>
@@ -14,7 +20,7 @@ footer{
   color: aqua;
 }
 footer p{
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
