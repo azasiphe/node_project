@@ -1,11 +1,17 @@
 <template>
-  <footer>
+  <footer class="absolute-bottom">
     <p>Copyright &copy; 2024 All Rights Reserved.</p>
   </footer>
 </template>
 
 <script>
-
+export default {
+        data() {
+            return{
+                currYear: new Date().getFullYear()
+            }
+        }
+    }
 </script>
 
 <style scoped>
