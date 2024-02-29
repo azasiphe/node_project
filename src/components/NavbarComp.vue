@@ -45,6 +45,9 @@ nav{
 .navlink{
   color: white;
 }
+.nav-link{
+  color: yellow;
+}
 /* footer p{
   padding: 40px 0;
   text-align: center;

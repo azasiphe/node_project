@@ -1,5 +1,5 @@
 <template>
-    <div class="aboutus">
+    <div class="aboutus bg-black">
         <div class="row justify-content-center">
             <div class="col-8">
                 <h1 class="display-2 mt-3 "><img class="Contact-img" src="https://i.ibb.co/GxLs0XZ/pngtree-yellow-brush-stock-clipart-png-image-8940369-removebg-preview.png" alt="background-image" loading="lazy" width="200"><span class="n1">C</span><span class="n2">O</span><span class="n3">N</span><span class="n4">T</span><span class="n5">A</span><span class="n6">C</span><span class="n7">T</span><span class="n8"> US</span></h1>

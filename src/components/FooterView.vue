@@ -1,5 +1,5 @@
 <template>
-  <footer class="absolute-bottom">
+  <footer>
     <p>Copyright &copy; 2024 All Rights Reserved.</p>
   </footer>
 </template>
@@ -20,7 +20,7 @@ footer{
   color: aqua;
 }
 footer p{
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
