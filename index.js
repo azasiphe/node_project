@@ -11,7 +11,9 @@ config();
 const PORT = process.env.PORT || 3500;
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin:"*"
+}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.static('public'));
@@ -50,12 +52,12 @@ app.post('/login', async (req, res) => {
     res.json({ msg: 'Logged in successfully', token });
 });
 
-// Protected route
+
 app.get('/protected', authenticateToken, (req, res) => {
     res.json({ msg: 'This is a protected route', user: req.user });
 });
 
-//  Middleware for Authentication
+
 function authenticateToken(req, res, next) {
     const token = req.cookies.token;
     if (!token) {
