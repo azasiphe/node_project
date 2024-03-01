@@ -1,38 +1,52 @@
 <template>
-  <nav class="navbar navbar-expand-lg text-white p-3">
-  <div class="container-fluid">
-    <ul class="navbar-nav gap-4">
-      <li class="nav-item">
-      |  <router-link to="/" class="navlink">Home</router-link> |
-      </li>
-      <li class="nav-item">
-      |  <router-link to="/about" class="navlink">About</router-link> |
-      </li>
-      <li class="nav-item">
-      |  <router-link to="/products" class="navlink">Products</router-link> |
-      </li>
-      <li class="nav-item">
-      |  <router-link to="/admin" class="navlink">Admin</router-link> |
-      </li>
-      <li class="nav-item">
-      |  <router-link to="/contact" class="navlink">Contact</router-link> |
-      </li>
-    </ul>
-    
-    <a class="navbar-brand" href="#">Navbar</a>
-    
-    <ul class="navbar-nav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white p-3">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">Navbar</a>
 
-    <li class="nav-item">
-          <button @click="showPriceList">Price List</button>
-        </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" href="#">Register</a>
-      </li>
-    </ul>
-</div>
-</nav>
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/products" class="nav-link">Products</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/admin" class="nav-link">Admin</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/contact" class="nav-link">Contact</router-link>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button @click="showPriceList" class="btn btn-outline-light">Price List</button>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
