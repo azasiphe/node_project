@@ -22,6 +22,11 @@
     <a class="navbar-brand" href="#">Navbar</a>
     
     <ul class="navbar-nav">
+
+    <li class="nav-item">
+          <button @click="showPriceList">Price List</button>
+        </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="#">Register</a>
       </li>
@@ -33,12 +38,10 @@
 <script>
 export default {
   methods: {
-    show() {
+    showPriceList() {
       window.open('https://i.ibb.co/B6kNgqw/Black-And-Yellow-Minimalist-Photography-Pricelist.png', '_blank');
-    },
-    goHome() {
-      this.$router.push('/');
     }
+ 
   }
 }
 </script>
