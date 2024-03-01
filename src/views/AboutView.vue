@@ -1,13 +1,12 @@
 <template>
-  <div class="about">
-    <div class="row mt-5 justify-content-center">
-      <div class="col-lg-2 col-md-12 col-sm-6">
+  <div class="about vh-100">
+    <h1 class="Abt-header mt-3 display-4">About Us</h1>
+    <div class="row mt-5 justify-content-center mb-5">
+      <div class="col-lg-3 col-md-12 col-sm-6">
         <div class="Abt-img">
-          <img src="https://i.ibb.co/7br35D2/Screenshot-2024-02-28-135701-removebg-preview.png" alt="about-us-img">
         </div>
       </div>
-      <div class="col-lg-1 d-lg-block d-none"></div>
-      <div class="col-lg-5 col-md-8 col-sm-12 lead mt-5">
+      <div class="col-lg-6 col-md-8 col-sm-12 lead mt-5">
         <p>
           Welcome to GAaNA's Art Gallery, a vibrant space that emerged in 2022, born from the visionary minds of Asisipho Gcusa and Azasipe Ndoro. Named in honor of their profound commitment to art and community, GAaNA's Art Gallery stands as a beacon of inspiration within their township environment. 
         </p>
@@ -15,8 +14,7 @@
           With a passion for making art accessible, Asisipho and Azasipe have fostered a thriving partnership, dedicated to showcasing affordable and impactful works that resonate with the spirit of their community. From paintings to sculptures, each piece tells a unique story, inviting visitors to explore the rich tapestry of creativity and culture. Step inside and experience the beauty, diversity, and shared vision that define GAaNA's Art Gallery.
         </p>
       </div>
-      <div class="col-lg-4">
-        <img class="srcn-sht d-lg-block d-none img-fluid" src="https://i.ibb.co/XbnpFfK/Screenshot-2024-02-26-143808.png" alt="Screenshot-2024-02-26-143808" loading="lazy">
+      <div class="col-lg-3">
       </div>
     </div>
     <div class="row justify-content-center mt-5">

@@ -2,7 +2,7 @@
     <div class="aboutus bg-black vh-100">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
+                <div class="col-lg-6 col-md-10">
                     <h1 class="display-2 mt-3 text-center text-white">
                         <span class="n1">C</span><span class="n2">O</span><span class="n3">N</span><span class="n4">T</span><span class="n5">A</span><span class="n6">C</span><span class="n7">T</span><span class="n8"> US</span>
                     </h1>
@@ -33,9 +33,6 @@
                             </div>
                         </div>
                     </div>
-                <div class="col-lg-4 col-md-10">
-                    <img src="https://i.ibb.co/vHWKQbj/Screenshot-2024-02-26-123707.png" alt="STA" loading="lazy" class="d-lg-block d-none">
-                </div>
             </div>
         </div>
     </div>
@@ -46,9 +43,7 @@
     border-radius: 10px;
 }
 .d-lg-block{
-    position: absolute;
-    width: fit-content;
-    /* margin-left: -120px; */
+    width: auto;
 }
 .n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8{
     animation: lighting 3s linear infinite;
