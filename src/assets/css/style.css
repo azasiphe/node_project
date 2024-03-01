@@ -11,13 +11,12 @@ body{
   overflow-x: hidden;
 }
 .Home {
-  font-weight: 400;
-  font-style: normal;
+  /* font-weight: 400;
+  font-style: normal; */
 }
 .Home-header, .home-header {
   font-size: 6rem;
   color: purple;
-  text-align: center;
 }
 .art-header {
   color: white;
@@ -41,70 +40,3 @@ input{
   border-radius: 10px 0 0 10px;
   width: 15%;
 }
-
-.home-img-two{
-  width: 400px;
-}
-
-@media (max-width: 768px) and (max-width: 991.98px) {
-  .Home-header {
-    font-size: 5rem;
-  }
-  .home-img-two{
-    width: 400px;
-  }
-  .home-header, .background-image {
-    font-size: 5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .Home-header {
-    font-size: 4rem;
-    margin-top: 4rem;
-  }
-  .home-img-two{
-    width: 300px;
-  }
-  .img-sm {
-    width: 150px;
-  }
-  .home-header, .background-image {
-    font-size: 4rem;
-  }
-}
-
-.home-img {
-  height: auto;
-  max-width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1170px) {
-  .home-img {
-    display: block;
-  }
-}
-
-@media (max-width: 1169.98px) {
-  .home-img {
-    display: none;
-  }
-}
-
-.home-img-two {
-  height: auto;
-  max-width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1170px) {
-  .home-img-two {
-    display: none;
-  }
-}
-

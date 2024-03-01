@@ -1,5 +1,5 @@
 <template>
-    <div class="aboutus bg-black vh-100">
+    <div class="aboutus bg-dark vh-100">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-10">
@@ -21,7 +21,7 @@
                             <button class="mt-2 border-0 bg-danger text-dark p-2">submit</button>
                           </div>
                         </div>
-                        <div class="Card bg-dark text-white m-5">
+                        <div class="Card bg-black text-white m-5">
                             <div class="row">
                                 <div class="col-sm-4"><i class="bi bi-telephone"></i> Contact
                                     <p>069-292-9578</p></div>

@@ -12,7 +12,7 @@
                         <h2 class="lead">Oil painting</h2> 
                         <span class="lead mb-4">by SledgeTheArtist</span>
                         <p><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>  <span class="lead">63 Artist Reviews</span></p>
-                        <h3 class="product-price">R999.99</h3>
+                        <h3 class="product-price"></h3>
                         <hr class="my-4 w-100 mt-5">
                         <div class="mbc mt-3">
                             <p>Shipping:</p>

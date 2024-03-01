@@ -1,10 +1,9 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white p-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white p-3 sticky-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
-      <!-- Brand -->
+
       <a class="navbar-brand" href="#">Navbar</a>
 
-      <!-- Toggler/collapsibe Button -->
       <button
         class="navbar-toggler"
         type="button"
