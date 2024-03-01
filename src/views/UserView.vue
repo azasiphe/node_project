@@ -95,10 +95,13 @@
     userpadd: userpadd.value,
     userProfile: userProfile.value
   };
-  
+
   try {
+  
     await store.dispatch('postusers', newUser);
-    users.value.push(newUser);
+    
+   
+    await store.dispatch('fetchusers'); 
     clearFields();
     window.alert('User has been added.');
   } catch (error) {
