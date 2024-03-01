@@ -4,7 +4,7 @@
       <div class="products mx-5 mb-3">
         <button class="filter-button border-0 bg-dark text-" @click="toggleSort" id="filter">Sort </button>
         <input v-model="searchInput" placeholder="Search Product" class="search-input bg-dark">
-        <button @click="search" class="search-button border-0 bg-dark">Search</button>
+        <button @click="search" class="search-button border-0 bg-dark" id="filter">Search</button>
       </div>
       <div class="products container-lg mb-3">
         <div class="product-cards">
@@ -122,6 +122,9 @@ export default {
 .search-button{
   padding: 10px;
   border-radius: 0 10px 10px 0;
+}
+#filter{
+  color:yellow;
 }
   </style>
   
