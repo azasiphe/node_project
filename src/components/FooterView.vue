@@ -1,6 +1,10 @@
 <template>
   <footer class="container-fluid bg-dark py-1">
-    <p>Copyright &copy; 2024 All Rights Reserved.</p>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <p class="text-center">Copyright &copy; 2024 All Rights Reserved.</p>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -23,5 +27,4 @@ footer p{
   padding: 10px 0;
   text-align: center;
 }
-
 </style>
