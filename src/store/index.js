@@ -60,21 +60,19 @@ export default createStore({
     }
   }
  ,
- async postusers({ commit, state }, newItem) {
+ async postUser({ commit }, newItem) {
   try {
-    await axios.post(baseUrl + '/users', newItem);
+    await axios.post(baseUrl + '/users', newItem); 
     
-  
-    const updatedUsers = [...state.users, newItem];
-    commit('SET_USERS', updatedUsers);
     
-    window.alert('User has been added.');
+    await commit('fetchusers');
+    window.alert('User has been added.'); 
   } catch (error) {
     console.error(error);
-    window.location.reload();
+    window.alert('Failed to add user.');
   }
-}
-,
+},
+
   async deleteProduct({commit}, prodID){
     await axios.delete(baseUrl+`/products/${prodID}`)
     window.location.reload()
