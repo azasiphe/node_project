@@ -3,8 +3,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <h1 class="display-2 mt-3 text-center">
-                        <img class="d-md-none Contact-img" src="https://i.ibb.co/GxLs0XZ/pngtree-yellow-brush-stock-clipart-png-image-8940369-removebg-preview.png" alt="background-image" loading="lazy" width="200">
+                    <h1 class="display-2 mt-3 text-center text-white">
                         <span class="n1">C</span><span class="n2">O</span><span class="n3">N</span><span class="n4">T</span><span class="n5">A</span><span class="n6">C</span><span class="n7">T</span><span class="n8"> US</span>
                     </h1>
                     <div class="inputNames">
@@ -24,18 +23,18 @@
                         </div>
                         <div class="Card bg-dark text-white m-5">
                             <div class="row">
-                                <div class="col-4"><i class="bi bi-telephone"></i> Contact
+                                <div class="col-sm-4"><i class="bi bi-telephone"></i> Contact
                                     <p>069-292-9578</p></div>
-                                <div class="col-4"><i class="bi bi-envelope"></i> Email
+                                <div class="col-sm-4"><i class="bi bi-envelope"></i> Email
                                     <p>gcusaaa@gmail.com</p></div>
-                                <div class="col-4"><i class="bi bi-geo-alt"></i> Location
+                                <div class="col-sm-4"><i class="bi bi-geo-alt"></i> Location
                                     <p>SOMERSET CROSSING, STRAND, 7140</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <div class="col-lg-4 col-md-10">
-                    <img src="https://i.ibb.co/vHWKQbj/Screenshot-2024-02-26-123707.png" alt="STA" loading="lazy" height="740" class="d-lg-block d-none">
+                    <img src="https://i.ibb.co/vHWKQbj/Screenshot-2024-02-26-123707.png" alt="STA" loading="lazy" class="d-lg-block d-none">
                 </div>
             </div>
         </div>
@@ -46,18 +45,24 @@
 .Card, .border-0{
     border-radius: 10px;
 }
+.d-lg-block{
+    position: absolute;
+    width: fit-content;
+    /* margin-left: -120px; */
+}
 .n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8{
     animation: lighting 3s linear infinite;
 }
 @keyframes lighting {  
 	0%{
         text-shadow: none;
+        color: yellow;
     }
 	90%{
         text-shadow: none;
     }
 	100%{
-        text-shadow: 0 0 7px purple, 0 0 5px purple;
+        text-shadow: 0 0 7px blue, 0 0 5px blue;
     }
 }
 .n1{

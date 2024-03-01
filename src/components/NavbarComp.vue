@@ -4,14 +4,13 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span  class="navbar-toggler-icon"></span>
     </button>
-    <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
         <li class="nav-item">
         |  <router-link to="/" class="navlink">Home</router-link> |
-        |  <router-link to="/" class="navlink" aria-current="page">Home</router-link> |
         </li>
         <li class="nav-item">
         |  <router-link to="/about" class="navlink">About</router-link> |
