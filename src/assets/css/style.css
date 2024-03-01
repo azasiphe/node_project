@@ -7,7 +7,6 @@
   font-family: "Jolly Lodger", system-ui;
   /* background-color: "dark" !important; */
 }
-
 body{
   overflow-x: hidden;
 }
@@ -32,7 +31,6 @@ body{
   margin-left: -3rem;
   z-index: -1;
 }
-
 #filter{
 margin-right: 70%;
 padding: 10px;

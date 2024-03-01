@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 <div class="col-lg-4 col-md-10">
-                    <img src="https://i.ibb.co/vHWKQbj/Screenshot-2024-02-26-123707.png" alt="STA" loading="lazy" height="685" class="d-lg-block d-none">
+                    <img src="https://i.ibb.co/vHWKQbj/Screenshot-2024-02-26-123707.png" alt="STA" loading="lazy" height="740" class="d-lg-block d-none">
                 </div>
             </div>
         </div>
